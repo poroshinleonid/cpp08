@@ -1,7 +1,8 @@
 CPP = "c++"
-CPPFLAGS = -Wall -Wextra -Werror -std=c++17
+CPPFLAGS = -Wall -Wextra -Werror -std=c++17 -g
 NAME = ex01_exec
-SRCS = main.cpp
+SRCS = main.cpp \
+		Span.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
