@@ -1,6 +1,6 @@
 CPP = "c++"
 CPPFLAGS = -Wall -Wextra -Werror -std=c++17
-NAME = easyfind
+NAME = easy_find
 SRCS = main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
