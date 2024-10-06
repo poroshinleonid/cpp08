@@ -1,9 +1,9 @@
 #include "Span.hpp"
-#include <vector>
 #include <algorithm>
-#include <numeric>
-#include  <utility>
 #include <iostream>
+#include <numeric>
+#include <utility>
+#include <vector>
 
 Span::Span() {}
 
@@ -33,7 +33,8 @@ int Span::longestSpan() {
   if (storage.size() < 2) {
     throw std::logic_error("Not enough numbers to find a span.");
   }
-  std::pair<std::vector<int>::iterator, std::vector<int>::iterator> extremes = std::minmax_element(storage.begin(), storage.end());
+  std::pair<std::vector<int>::iterator, std::vector<int>::iterator> extremes =
+      std::minmax_element(storage.begin(), storage.end());
   return *extremes.second - *extremes.first;
 }
 
@@ -49,4 +50,14 @@ int Span::shortestSpan() {
   std::adjacent_difference(sorted_storage.begin(), sorted_storage.end(),
                            diffs.begin());
   return *(std::min_element(diffs.begin() + 1, diffs.end()));
+}
+
+void Span::printSpan() {
+  for (std::vector<int>::iterator it = storage.begin(); it != storage.end(); it++) {
+    std::cout << *it << " ";
+  }
+}
+
+std::vector<int> &Span::c() {
+  return storage;
 }

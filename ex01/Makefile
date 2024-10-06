@@ -1,6 +1,6 @@
 CPP = "c++"
-CPPFLAGS = -Wall -Wextra -Werror -std=c++17 -g
-NAME = ex01_exec
+CPPFLAGS = -Wall -Wextra -Werror -std=c++17
+NAME = span_test
 SRCS = main.cpp \
 		Span.cpp
 

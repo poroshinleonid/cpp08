@@ -1,9 +1,8 @@
 #ifndef SPAN_HPP
 #define SPAN_HPP
 
-#include <vector>
 #include <stdexcept>
-
+#include <vector>
 
 class Span {
 private:
@@ -19,6 +18,8 @@ public:
   void addNumber(int n);
   int longestSpan();
   int shortestSpan();
+  void printSpan();
+  std::vector<int> &c();
 
 public:
   template <typename IterType> void addNumbers(IterType begin, IterType end) {
