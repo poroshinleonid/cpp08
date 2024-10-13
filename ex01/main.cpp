@@ -69,7 +69,7 @@ int main() {
     std::cout << *it << " ";
   }
   std::cout << std::endl;
-  std::cout << "stack: " << std::endl;
+  std::cout << "span: " << std::endl;
   sp3.printSpan();
   std::cout << std::endl;
   std::cout << "Shortest Span: " << sp3.shortestSpan() << std::endl;
